@@ -1,0 +1,30 @@
+alter table viajes.turista
+add nombre varchar(100) not null;
+commit;
+
+insert into  viajes.turista (id_turista, nombre, pais, sexo, edad) values (1,'Jorge Juarez', 'el salvador','M',25);
+insert into  viajes.turista (id_turista, nombre, pais, sexo, edad) values (2,'Julia Gonzales', 'honduras','F',24);
+insert into  viajes.turista (id_turista, nombre, pais, sexo, edad) values (3,'Lucia Lopez', 'costa rica','F',23);
+commit;
+
+
+
+select * from viajes.turista;
+select * from viajes.recorrido;
+select * from viajes.bitacora;
+select * from viajes.numeros;
+insert into viajes.numeros values(5,10.3);
+
+
+
+insert into Idioma (id_Idioma, nombre_Idioma) values ('1','Español');
+insert into Idioma (id_Idioma, nombre_Idioma) values ('2','Francés');
+insert into Idioma (id_Idioma, nombre_Idioma) values ('3','Inglés');
+
+commit;
+select * from viajes.idioma;
+
+update turista SET id_idioma = '1' where id_turista = 1;
+update turista SET id_idioma = '2' where id_turista = 2;
+update turista SET id_idioma = '3' where id_turista = 3;
+commit;
